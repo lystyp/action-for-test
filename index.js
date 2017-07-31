@@ -3,6 +3,7 @@
 const ActionsSdkApp = require('actions-on-google').ActionsSdkApp;
 
 exports.<insertCloudFunctionName>= (req, res) => {
+  console.log("TESTTTTTTTTTTTT");
   const app = new ActionsSdkApp({request: req, response: res});
 
     function mainIntent (app) {
