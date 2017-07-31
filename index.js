@@ -1,3 +1,39 @@
+// 'use strict';
+
+// const ActionsSdkApp = require('actions-on-google').ActionsSdkApp;
+
+// exports.<insertCloudFunctionName>= (req, res) => {
+//   const app = new ActionsSdkApp({request: req, response: res});
+
+//     function mainIntent (app) {
+//       let inputPrompt = app.buildInputPrompt(false,
+//         'Hi! Say something, and I\'ll repeat it');
+//       app.ask(inputPrompt);
+//     }
+
+//     function respond (app) {
+//       let inputPrompt = app.buildInputPrompt(false,
+//         'Hi! Say something, and I\'ll repeat it.');
+//       app.ask(inputPrompt);
+//     }
+
+// }
+
+// let actionMap = new Map();
+// actionMap.set(app.StandardIntents.MAIN, mainIntent);
+// actionMap.set(app.StandardIntents.TEXT, respond);
+
+// //add more intents to the map
+
+// app.handleRequest(actionMap);
+
+
+
+
+
+
+
+
 'use strict';
 
 const express = require('express');
@@ -11,8 +47,8 @@ restService.use(bodyParser.urlencoded({
 
 restService.use(bodyParser.json());
 
-restService.post('/echo', function(req, res) {
-    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Tets. Speak again."
+restService.post('', function(req, res) {
+    var speech = "Tets. Speak again."
     return res.json({
         speech: speech,
         displayText: speech,
